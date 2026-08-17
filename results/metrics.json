@@ -1,0 +1,124 @@
+{
+  "protocol": {
+    "seed": 42,
+    "split": "global chronological 70/10/20; timestamp ties kept together",
+    "train_rows": 700148,
+    "validation_rows": 100020,
+    "test_rows": 200041,
+    "train_end_timestamp": 974862386,
+    "validation_end_timestamp": 975768738,
+    "relevance_threshold": 4.0,
+    "negatives_per_user": 100,
+    "candidate_policy": "all test positives plus sampled never-interacted items",
+    "test_policy": "evaluated once after model and hyperparameters are fixed"
+  },
+  "evaluation_user_segments": {
+    "high": 588,
+    "low": 640,
+    "medium": 534
+  },
+  "results": [
+    {
+      "model": "Popularity",
+      "rmse": 0.9717693255857865,
+      "mae": 0.7743740302118568,
+      "precision@10": 0.623155505107832,
+      "recall@10": 0.21464560522718676,
+      "ndcg@10": 0.6635842275289511,
+      "hit_rate@10": 0.9534619750283768,
+      "coverage@10": 0.14215812516095802,
+      "novelty@10": 10.074349465475704,
+      "mean_train_popularity@10": 1061.583995459705,
+      "evaluated_users": 1762,
+      "candidates": 288460,
+      "by_user_activity": {
+        "low": {
+          "precision@10": 0.76609375,
+          "recall@10": 0.1702037933044366,
+          "ndcg@10": 0.7837690184350428,
+          "hit_rate@10": 0.9984375,
+          "coverage@10": 0.08060777749163019,
+          "novelty@10": 9.51345100801654,
+          "mean_train_popularity@10": 1389.41296875,
+          "evaluated_users": 640,
+          "candidates": 119971
+        },
+        "medium": {
+          "precision@10": 0.5554307116104868,
+          "recall@10": 0.251907056377229,
+          "ndcg@10": 0.6151916385332004,
+          "hit_rate@10": 0.9176029962546817,
+          "coverage@10": 0.11898016997167139,
+          "novelty@10": 10.150823622395487,
+          "mean_train_popularity@10": 1003.2513108614232,
+          "evaluated_users": 534,
+          "candidates": 80859
+        },
+        "high": {
+          "precision@10": 0.5290816326530613,
+          "recall@10": 0.2291781642687472,
+          "ndcg@10": 0.576719221310979,
+          "hit_rate@10": 0.9370748299319728,
+          "coverage@10": 0.134689672933299,
+          "novelty@10": 10.615400167820432,
+          "mean_train_popularity@10": 757.7389455782313,
+          "evaluated_users": 588,
+          "candidates": 87630
+        }
+      }
+    },
+    {
+      "model": "SVD",
+      "rmse": 1.0791947677906923,
+      "mae": 0.8717742640142564,
+      "precision@10": 0.527639046538025,
+      "recall@10": 0.18825669900169642,
+      "ndcg@10": 0.5797530605143849,
+      "hit_rate@10": 0.9375709421112373,
+      "coverage@10": 0.4877671903167654,
+      "novelty@10": 10.878502798452123,
+      "mean_train_popularity@10": 754.8759364358683,
+      "evaluated_users": 1762,
+      "candidates": 288460,
+      "by_user_activity": {
+        "low": {
+          "precision@10": 0.39390625,
+          "recall@10": 0.0632040675203511,
+          "ndcg@10": 0.4230833029137607,
+          "hit_rate@10": 0.9421875,
+          "coverage@10": 0.11949523564254443,
+          "novelty@10": 12.070660879989578,
+          "mean_train_popularity@10": 515.21984375,
+          "evaluated_users": 640,
+          "candidates": 119971
+        },
+        "medium": {
+          "precision@10": 0.5850187265917605,
+          "recall@10": 0.25308857557213676,
+          "ndcg@10": 0.6513122303631073,
+          "hit_rate@10": 0.9269662921348315,
+          "coverage@10": 0.3110996652073139,
+          "novelty@10": 10.035022687685375,
+          "mean_train_popularity@10": 994.8007490636704,
+          "evaluated_users": 534,
+          "candidates": 80859
+        },
+        "high": {
+          "precision@10": 0.6210884353741496,
+          "recall@10": 0.26549047801435943,
+          "ndcg@10": 0.6852905573939455,
+          "hit_rate@10": 0.9421768707482994,
+          "coverage@10": 0.3432912696368787,
+          "novelty@10": 10.346933422543064,
+          "mean_train_popularity@10": 797.8352040816327,
+          "evaluated_users": 588,
+          "candidates": 87630
+        }
+      },
+      "parameters": {
+        "n_factors": 50,
+        "random_state": 42
+      }
+    }
+  ]
+}
