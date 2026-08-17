@@ -2,6 +2,8 @@
 
 # MovieLens 1M Recommender: Leakage-Safe Offline Evaluation
 
+[![Python tests](https://github.com/yuanzou0/movielens-1m-recommender/actions/workflows/tests.yml/badge.svg)](https://github.com/yuanzou0/movielens-1m-recommender/actions/workflows/tests.yml)
+
 ## 中文
 
 这是一个强调**实验可信度**而非模型数量的离线推荐系统项目。当前主实验采用时间顺序留出法和更贴近真实推荐场景的候选集排序，对比贝叶斯流行度基线与稀疏截断 SVD。
