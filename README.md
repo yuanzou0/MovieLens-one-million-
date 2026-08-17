@@ -8,6 +8,10 @@
 
 > **项目状态：** `run_experiment.py` 是当前可复现的主实验。`Final_Code.ipynb` 和 `Report.pdf` 作为原始课程项目存档保留，其中采用随机切分的历史指标不能与当前实验结果直接比较。
 
+### 项目背景
+
+本项目最初为 Advanced Python 课程期末项目，后续按照数据科学与机器学习作品集标准进行了重构。项目展示了模块化设计、类型标注、Protocol 与 dataclass、命令行接口、Pathlib 文件管理、NumPy/Pandas 向量化、SciPy 稀疏矩阵、确定性随机数控制和单元测试。
+
 ### 为什么要进行这次修订
 
 原课程项目使用随机 80/20 切分，并在之后用于测试的数据上间接进行了 SVD 交叉验证调参。此外，原 Top-K 评测只对测试集中已经出现的物品进行排序，因此结果偏乐观。修订后的实验协议解决了这些问题：
@@ -88,6 +92,10 @@ MovieLens 数据由 [GroupLens](https://grouplens.org/datasets/movielens/1m/) �
 This offline recommendation project emphasizes **experimental credibility** rather than model count. The primary experiment compares a Bayesian popularity baseline with sparse truncated SVD using a chronological holdout and realistic sampled-candidate ranking.
 
 > **Status:** `run_experiment.py` is the reproducible primary experiment. `Final_Code.ipynb` and `Report.pdf` are retained as legacy course artifacts containing earlier random-split analyses; their metrics are not directly comparable with the current protocol.
+
+### Project Context
+
+This project originated as an Advanced Python course final project and was subsequently refactored into a data-science and machine-learning portfolio project. It demonstrates modular design, type annotations, Protocol and dataclass usage, command-line interfaces, pathlib-based file handling, NumPy/Pandas vectorization, SciPy sparse matrices, deterministic random-state management, and unit testing.
 
 ### Why this revision matters
 
